@@ -33,9 +33,22 @@ export type CaseStudy = {
   stories: CaseStory[];
 };
 
+/**
+ * 画像配信元。
+ * 本番ビルドのペイロード軽量化のため、実画像は公開リポジトリ(raw.githubusercontent)
+ * から配信しています。差し替え時は該当ファイルをコミットし、下記のコミットSHAを更新します。
+ * (将来、画像をVercel側で直接ホストする場合は "/assets" に戻すだけで動作します)
+ */
+const ASSET_BASE =
+  "https://raw.githubusercontent.com/permil-g-y/Influencer_Partner_Guide/51171fc44f396b0f9b52e51f4255418ebed8e2f7/public/assets";
+
+export function caseAsset(path: string): string {
+  return `${ASSET_BASE}/${path}`;
+}
+
 function stories(id: string): CaseStory[] {
   return [1, 2, 3].map((n) => ({
-    src: `/assets/cases/${id}/story-0${n}.jpg`,
+    src: caseAsset(`cases/${id}/story-0${n}.jpg`),
     label: `ストーリーズ ${n}`,
   }));
 }
@@ -45,7 +58,7 @@ export const cases: CaseStudy[] = [
     id: "case01",
     displayName: "さっくんさん",
     username: "__sakkusaku__",
-    avatar: "/assets/cases/case01/avatar.jpg",
+    avatar: caseAsset("cases/case01/avatar.jpg"),
     genre: "育児・ライフスタイル",
     stories: stories("case01"),
   },
@@ -53,7 +66,7 @@ export const cases: CaseStudy[] = [
     id: "case02",
     displayName: "𝒑𝒊𝒄𝒉𝒊さん",
     username: "pichi__o0",
-    avatar: "/assets/cases/case02/avatar.jpg",
+    avatar: caseAsset("cases/case02/avatar.jpg"),
     genre: "ライフスタイル",
     stories: stories("case02"),
   },
@@ -61,7 +74,7 @@ export const cases: CaseStudy[] = [
     id: "case03",
     displayName: "マキパパさん",
     username: "maki_daddy0815",
-    avatar: "/assets/cases/case03/avatar.jpg",
+    avatar: caseAsset("cases/case03/avatar.jpg"),
     genre: "育児・ライフスタイル",
     stories: stories("case03"),
   },
