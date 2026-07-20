@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-feature-settings: "palt";
+  }
+
+  ::selection {
+    background: rgba(225, 48, 108, 0.15);
+  }
+}
+
+@layer utilities {
+  .text-ig-gradient {
+    @apply bg-ig-gradient bg-clip-text text-transparent;
+  }
+
+  /* 数字を大胆に見せるためのタイトなトラッキング */
+  .stat-number {
+    @apply font-sans font-bold leading-none tracking-tight tabular-nums;
+  }
+}
