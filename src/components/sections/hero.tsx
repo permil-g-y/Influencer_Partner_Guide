@@ -1,4 +1,4 @@
-import { BadgeCheck, Palette, TrendingUp } from "lucide-react";
+import { BadgeCheck, Palette, Sparkles, TrendingUp } from "lucide-react";
 import { FadeIn } from "@/components/fade-in";
 import { ImageSlot } from "@/components/image-slot";
 import { CtaButton } from "@/components/cta-button";
@@ -37,33 +37,58 @@ export function Hero() {
 
       <div className="mx-auto flex min-h-svh w-full max-w-slide flex-col justify-center px-6 py-28 md:px-10">
         <FadeIn>
-          <p className="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-ink-muted">
-            <span className="inline-block h-[3px] w-6 rounded-full bg-ig-gradient" />
-            For Instagram Influencers
-          </p>
-          <p className="mb-4 text-sm font-semibold text-ink-soft md:text-base">
-            SNSスクールPR案件 ｜ Instagramインフルエンサー募集
-          </p>
-          <h1 className="max-w-3xl text-4xl font-bold leading-[1.2] tracking-tight md:text-6xl md:leading-[1.15]">
-            あなたの世界観のまま、
+          {/* 上部ラベル: グラデーション枠の「限定」バッジで特別感を演出 */}
+          <div className="flex flex-col items-start gap-3">
+            <span className="inline-flex rounded-full bg-ig-gradient p-px shadow-[0_6px_20px_-10px_rgba(225,48,108,0.6)]">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5">
+                <Sparkles className="h-3.5 w-3.5 text-ig-pink" />
+                <span className="text-ig-gradient text-xs font-bold tracking-[0.08em]">
+                  Instagramインフルエンサー限定
+                </span>
+              </span>
+            </span>
+            <p className="pl-1 text-sm font-semibold tracking-[0.04em] text-ink-soft">
+              SNSスクールPRパートナー募集
+            </p>
+          </div>
+
+          {/* メインコピー: 2行目「収益につながるPRを。」を一まとまりで視認性重視 */}
+          <h1 className="mt-8 max-w-3xl text-[2rem] font-bold leading-[1.28] tracking-tight sm:text-5xl md:text-[4.25rem] md:leading-[1.12]">
+            世界観を守りながら、
             <br />
-            <span className="text-ig-gradient">新しい報酬のかたち</span>を。
+            <span className="whitespace-nowrap text-ig-gradient">
+              収益につながるPRを。
+            </span>
           </h1>
-          <p className="mt-8 max-w-xl text-[15px] leading-8 text-ink-muted md:text-base">
-            合同会社DACHOがキャスティングを行う、SNSスクールPR案件のご案内です。
-            台本づくりから画像・動画制作まで当社が伴走し、あなたのアカウントの空気感を
-            大切にしたままPRを実現します。
-          </p>
+
+          {/* リード文: インフルエンサー目線・段落ごとに余白と広めの行間で可読性を確保 */}
+          <div className="mt-9 max-w-md space-y-5 text-[15px] leading-8 text-ink-muted md:text-base md:leading-9">
+            <p className="text-base font-bold text-ink md:text-lg">
+              固定報酬＋成果報酬をご用意。
+            </p>
+            <p>
+              台本・画像・動画制作はすべて当社が担当。
+              <br />
+              あなたは内容を確認して投稿するだけ。
+            </p>
+            <p>
+              世界観を大切にしながら、
+              <br />
+              無理なく収益につながるPRをご提案します。
+            </p>
+          </div>
         </FadeIn>
 
-        <FadeIn delay={0.15} className="mt-12">
-          <div className="grid max-w-2xl gap-3 sm:grid-cols-3">
+        <FadeIn delay={0.15} className="mt-14">
+          <div className="grid max-w-2xl gap-4 sm:grid-cols-3">
             {highlights.map((h) => (
               <div
                 key={h.title}
-                className="rounded-2xl border border-paper-line bg-white/80 p-5 shadow-sm backdrop-blur transition-shadow hover:shadow-md"
+                className="rounded-2xl border border-paper-line bg-white/85 p-5 shadow-sm backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
-                <h.icon className="mb-3 h-5 w-5 text-ig-pink" />
+                <span className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-ig-gradient-soft">
+                  <h.icon className="h-[18px] w-[18px] text-ig-pink" />
+                </span>
                 <p className="text-sm font-bold">{h.title}</p>
                 <p className="mt-1 text-xs leading-relaxed text-ink-muted">
                   {h.body}
@@ -73,9 +98,12 @@ export function Hero() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.25} className="mt-12">
-          <div className="flex flex-wrap items-center gap-5">
-            <CtaButton label="まずはZoomで話を聞いてみる" />
+        <FadeIn delay={0.25} className="mt-14">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
+            <CtaButton
+              label="まずはZoomで話を聞いてみる"
+              className="h-16 px-10 text-base"
+            />
             <p className="text-xs leading-relaxed text-ink-faint">
               所要時間は30分ほど。
               <br className="sm:hidden" />
