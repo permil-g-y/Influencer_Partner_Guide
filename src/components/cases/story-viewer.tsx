@@ -148,6 +148,7 @@ export function StoryViewer({
             <CaseAvatar
               src={caseData.avatar}
               displayName={caseData.displayName}
+              username={caseData.username}
               size={38}
             />
             <div className="min-w-0">

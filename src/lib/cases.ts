@@ -51,7 +51,7 @@ export const cases: CaseStudy[] = [
   },
   {
     id: "case02",
-    displayName: "ぴちさん",
+    displayName: "𝒑𝒊𝒄𝒉𝒊さん",
     username: "pichi__o0",
     avatar: "/assets/cases/case02/avatar.jpg",
     genre: "ライフスタイル",
@@ -59,10 +59,10 @@ export const cases: CaseStudy[] = [
   },
   {
     id: "case03",
-    displayName: "まきさん",
+    displayName: "マキパパさん",
     username: "maki_daddy0815",
     avatar: "/assets/cases/case03/avatar.jpg",
-    genre: "ライフスタイル",
+    genre: "育児・ライフスタイル",
     stories: stories("case03"),
   },
 ];

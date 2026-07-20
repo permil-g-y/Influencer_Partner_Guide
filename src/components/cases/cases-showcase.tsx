@@ -67,6 +67,7 @@ function CaseCard({
             <CaseAvatar
               src={caseData.avatar}
               displayName={caseData.displayName}
+              username={caseData.username}
               size={72}
             />
             <div className="min-w-0">

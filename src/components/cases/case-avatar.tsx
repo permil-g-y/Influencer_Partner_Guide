@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 type CaseAvatarProps = {
   src: string;
   displayName: string;
+  /** フォールバックの頭文字生成に使うユーザー名(装飾文字対策) */
+  username?: string;
   /** アバターの直径(px) */
   size?: number;
   /** Instagramらしいグラデーションのリングを付けるか */
@@ -14,12 +16,28 @@ type CaseAvatarProps = {
 };
 
 /**
+ * 頭文字を安全に取り出す。
+ * 表示名の先頭が装飾ユニコード(𝒑 等・フォント非対応)の場合は、
+ * ユーザー名の先頭の英数字を大文字で使う。
+ */
+function safeInitial(displayName: string, username?: string): string {
+  const first = Array.from(displayName.trim())[0];
+  if (first && (first.codePointAt(0) ?? 0) <= 0xffff && /\S/.test(first)) {
+    return first;
+  }
+  const alnum = username?.match(/[a-zA-Z0-9]/)?.[0];
+  if (alnum) return alnum.toUpperCase();
+  return "@";
+}
+
+/**
  * Instagram風の丸型プロフィールアイコン。
  * 画像が未配置の場合は、グラデーション背景＋表示名の頭文字にフォールバックする。
  */
 export function CaseAvatar({
   src,
   displayName,
+  username,
   size = 72,
   ring = true,
   className,
@@ -32,7 +50,7 @@ export function CaseAvatar({
     if (img && img.complete && img.naturalWidth === 0) setMissing(true);
   }, []);
 
-  const initial = displayName.trim().charAt(0) || "@";
+  const initial = safeInitial(displayName, username);
 
   return (
     <span
