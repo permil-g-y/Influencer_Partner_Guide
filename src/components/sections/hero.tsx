@@ -56,9 +56,7 @@ export function Hero() {
           <h1 className="mt-8 max-w-3xl text-[2rem] font-bold leading-[1.28] tracking-tight sm:text-5xl md:text-[4.25rem] md:leading-[1.12]">
             世界観を守りながら、
             <br />
-            <span className="whitespace-nowrap text-ig-gradient">
-              収益につながるPRを。
-            </span>
+            <span className="text-ig-gradient">収益につながるPRを。</span>
           </h1>
 
           {/* リード文: インフルエンサー目線・段落ごとに余白と広めの行間で可読性を確保 */}

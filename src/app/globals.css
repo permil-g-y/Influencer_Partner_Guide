@@ -7,6 +7,15 @@
     scroll-behavior: smooth;
   }
 
+  /* 横方向のはみ出しでページ全体が横スクロールしないための安全策。
+     意図的な横スクロール(参加者の声のカルーセル等)は各コンポーネント内の
+     overflow-x-auto で完結しているため影響を受けない。 */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-paper text-ink antialiased;
     font-feature-settings: "palt";

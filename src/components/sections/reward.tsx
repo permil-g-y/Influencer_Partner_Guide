@@ -19,12 +19,12 @@ export function Reward() {
 
       {/* 最低保証 → 成果報酬 */}
       <div className="grid gap-6 md:grid-cols-2">
-        <FadeIn>
-          <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
+        <FadeIn className="min-w-0">
+          <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
               01 ｜ 固定報酬(最低保証)
             </p>
-            <p className="stat-number mt-6 text-4xl md:text-5xl">
+            <p className="stat-number mt-6 text-[1.75rem] sm:text-4xl md:text-5xl">
               <span className="whitespace-nowrap">フォロワー数</span>
               <span className="whitespace-nowrap">
                 <span className="text-ig-gradient"> × ¥1</span>
@@ -39,12 +39,12 @@ export function Reward() {
             </p>
           </div>
         </FadeIn>
-        <FadeIn delay={0.1}>
-          <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
+        <FadeIn delay={0.1} className="min-w-0">
+          <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
               02 ｜ 成果報酬
             </p>
-            <p className="stat-number mt-6 text-4xl md:text-5xl">
+            <p className="stat-number mt-6 text-[1.75rem] sm:text-4xl md:text-5xl">
               平均{" "}
               <span className="whitespace-nowrap">
                 <span className="text-ig-gradient">約¥80,000</span>
@@ -97,7 +97,7 @@ export function Reward() {
               <p className="text-xs font-semibold text-ink-faint">
                 受け取り合計(1案件あたり)
               </p>
-              <p className="stat-number mt-3 text-5xl md:text-6xl">
+              <p className="stat-number mt-3 text-4xl sm:text-5xl md:text-6xl">
                 <span className="text-ig-gradient">¥190,000</span>
               </p>
             </div>
