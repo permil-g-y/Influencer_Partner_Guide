@@ -45,7 +45,7 @@ const faqs = [
 
 export function Faq() {
   return (
-    <Slide id="faq" page="09" chapter="FAQ" tone="alt">
+    <Slide id="faq" page="08" chapter="FAQ" tone="alt">
       <SectionHeading
         title={
           <>

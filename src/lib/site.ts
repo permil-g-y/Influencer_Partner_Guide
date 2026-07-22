@@ -22,11 +22,11 @@ export const siteConfig = {
     {
       label: "事業内容",
       value:
-        "インフルエンサーマーケティング / キャスティング / SNSマーケティング / BPO支援",
+        "インフルエンサーマーケティング / キャスティング / SNSマーケティング / BPO支援 / SNSスクール運営",
     },
     {
       label: "お問い合わせ",
-      value: "Instagram DM にてご連絡ください",
+      value: "公式InstagramのDMより、お気軽にご連絡ください。",
     },
   ],
 };

@@ -20,7 +20,6 @@ export default function Home() {
         <Hero />
         <Why />
         <Voices />
-        <About />
         <Strengths />
         <Reward />
         <Flow />
@@ -28,6 +27,7 @@ export default function Home() {
         <Cases />
         <Faq />
         <Cta />
+        <About />
       </main>
       <SiteFooter />
     </>

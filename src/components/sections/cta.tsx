@@ -12,7 +12,7 @@ const reassurances = [
 
 export function Cta() {
   return (
-    <Slide id="cta" page="10" chapter="Contact" tone="white" className="lg:min-h-[90vh]">
+    <Slide id="cta" page="09" chapter="Contact" tone="white" className="lg:min-h-[90vh]">
       <FadeIn className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl md:leading-[1.25]">
           案件詳細について、

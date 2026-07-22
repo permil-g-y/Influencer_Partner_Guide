@@ -57,7 +57,7 @@ const strengths = [
 
 export function Strengths() {
   return (
-    <Slide id="strengths" page="04" chapter="Our Strengths" tone="white">
+    <Slide id="strengths" page="03" chapter="Our Strengths" tone="white">
       <SectionHeading
         title={
           <>

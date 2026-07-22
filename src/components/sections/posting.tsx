@@ -32,7 +32,7 @@ const days = [
 
 export function Posting() {
   return (
-    <Slide id="posting" page="07" chapter="Posting Plan" tone="alt">
+    <Slide id="posting" page="06" chapter="Posting Plan" tone="alt">
       <SectionHeading
         title={
           <>

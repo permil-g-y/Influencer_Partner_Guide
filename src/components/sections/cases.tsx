@@ -1,10 +1,11 @@
 import { Slide } from "@/components/slide";
 import { SectionHeading } from "@/components/section-heading";
+import { FadeIn } from "@/components/fade-in";
 import { CasesShowcase } from "@/components/cases/cases-showcase";
 
 export function Cases() {
   return (
-    <Slide id="cases" page="08" chapter="Case Studies" tone="white">
+    <Slide id="cases" page="07" chapter="Case Studies" tone="white">
       <SectionHeading
         title={
           <>
@@ -22,6 +23,12 @@ export function Cases() {
         }
       />
       <CasesShowcase />
+
+      <FadeIn>
+        <p className="mt-12 max-w-3xl text-xs leading-6 text-ink-faint md:mt-14 md:text-[13px]">
+          ※掲載している投稿事例は、合同会社DACHOがキャスティング・企画・クリエイティブ制作・運用支援を担当した、提携オンラインスクールのPR実績の一部です。
+        </p>
+      </FadeIn>
     </Slide>
   );
 }

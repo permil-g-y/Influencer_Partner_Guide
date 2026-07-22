@@ -51,7 +51,7 @@ const steps = [
 
 export function Flow() {
   return (
-    <Slide id="flow" page="06" chapter="Project Flow" tone="white">
+    <Slide id="flow" page="05" chapter="Project Flow" tone="white">
       <SectionHeading
         title={
           <>

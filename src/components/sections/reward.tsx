@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/fade-in";
 
 export function Reward() {
   return (
-    <Slide id="reward" page="05" chapter="Rewards" tone="dark">
+    <Slide id="reward" page="04" chapter="Rewards" tone="dark">
       <SectionHeading
         dark
         title={
