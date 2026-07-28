@@ -15,7 +15,8 @@ export const siteConfig = {
    * Zoom日程調整用のURL（TimeRex / Calendly / Googleカレンダー予約ページなど）。
    * 未設定の間、CTAボタンは「DMで返信」への案内文とあわせて表示されます。
    */
-  zoomSchedulingUrl: "",
+  zoomSchedulingUrl:
+    "https://app.spirinc.com/t/OFCD0HcoEckabrhNiV_k0/as/NvzeuFW6wPfkylE5fRfsh/confirm-guest",
 
   companyOverview: [
     { label: "会社名", value: "合同会社DACHO" },
